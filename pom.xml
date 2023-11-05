@@ -15,7 +15,11 @@
     <quarkus.platform.version>3.5.0</quarkus.platform.version>
     <skipITs>true</skipITs>
     <surefire-plugin.version>3.1.2</surefire-plugin.version>
+    <project.scm.id>github</project.scm.id>
   </properties>
+  <scm>
+    <developerConnection>scm:git:https://github.com/taakcloud/taak-sdk-java.git</developerConnection>
+  </scm>
   <distributionManagement>
     <snapshotRepository>
       <id>ossrh</id>
