@@ -15,12 +15,13 @@
     <quarkus.platform.version>3.5.0</quarkus.platform.version>
     <skipITs>true</skipITs>
     <surefire-plugin.version>3.1.2</surefire-plugin.version>
-    <project.scm.id>github</project.scm.id>
+    <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
   </properties>
   <scm>
-    <url>https://github.com/taakcloud/taak-sdk-java</url>
-    <connection>scm:git:https://github.com/taakcloud/taak-sdk-java.git</connection>
-    <developerConnection>scm:git:https://github.com/taakcloud/taak-sdk-java.git</developerConnection>
+    <connection>scm:git:${project.scm.url}</connection>
+    <developerConnection>scm:git:${project.scm.url}</developerConnection>
+    <url>git@github.com:taakcloud/taak-sdk-java.git</url>
+    <tag>HEAD</tag>
   </scm>
   <distributionManagement>
     <snapshotRepository>
@@ -116,6 +117,14 @@
             </configuration>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>${maven-release-plugin.version}</version>
+        <configuration>
+          <scmCommentPrefix>[ci skip]</scmCommentPrefix>
+          <tagNameFormat>@{project.version}</tagNameFormat>
+        </configuration>
       </plugin>
     </plugins>
   </build>
