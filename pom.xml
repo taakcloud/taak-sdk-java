@@ -18,6 +18,8 @@
     <project.scm.id>github</project.scm.id>
   </properties>
   <scm>
+    <url>https://github.com/taakcloud/taak-sdk-java</url>
+    <connection>scm:git:https://github.com/taakcloud/taak-sdk-java.git</connection>
     <developerConnection>scm:git:https://github.com/taakcloud/taak-sdk-java.git</developerConnection>
   </scm>
   <distributionManagement>
