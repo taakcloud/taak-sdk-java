@@ -14,8 +14,6 @@ jobs:
 
       - name: Build and Test
         uses: qcastel/github-actions-maven-cmd@master
-        env:
-          JAVA_HOME: /usr/lib/jvm/java-17-openjdk/
         with:
           maven-args: 'clean install'
       - name: Release
