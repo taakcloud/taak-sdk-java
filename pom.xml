@@ -4,6 +4,28 @@
   <groupId>com.taakcloud</groupId>
   <artifactId>taak-sdk</artifactId>
   <version>1.0.3-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>Taak java SDK</name>
+  <description>A client SDK for taakcloud.com APIs</description>
+  <url>https://github.com/taakcloud/taak-sdk-java</url>
+  <organization>
+    <name>Taakcloud.com</name>
+  </organization>
+  <developers>
+    <developer>
+      <id>taak-dev-team</id>
+      <name>Taakcloud dev team</name>
+      <email>developer@taakcloud.com</email>
+    </developer>
+  </developers>
+  <licenses>
+    <license>
+      <name>Apache 2</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+      <comments>A business-friendly OSS license</comments>
+    </license>
+  </licenses>
   <properties>
     <compiler-plugin.version>3.11.0</compiler-plugin.version>
     <maven.compiler.release>17</maven.compiler.release>
@@ -156,6 +178,25 @@
           <nexusUrl>https://oss.sonatype.org/</nexusUrl>
           <autoReleaseAfterClose>true</autoReleaseAfterClose>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+            <configuration>
+              <gpgArguments>
+                <arg>--pinentry-mode</arg>
+                <arg>loopback</arg>
+              </gpgArguments>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
