@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.taakcloud</groupId>
   <artifactId>taak-sdk</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.4.1</version>
   <packaging>jar</packaging>
   <name>Taak java SDK</name>
   <description>A client SDK for taakcloud.com APIs</description>
@@ -193,8 +193,6 @@
         <version>1.6.13</version>
         <extensions>true</extensions>
         <configuration>
-          <serverId>ossrh</serverId>
-          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
           <autoReleaseAfterClose>true</autoReleaseAfterClose>
         </configuration>
       </plugin>
