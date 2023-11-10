@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.taakcloud</groupId>
   <artifactId>taak-sdk</artifactId>
-  <version>1.0.5-SNAPSHOT</version>
+  <version>1.0.6-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>Taak java SDK</name>
   <description>A client SDK for taakcloud.com APIs</description>
@@ -69,10 +69,6 @@
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-rest-client</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-arc</artifactId>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
@@ -183,6 +179,7 @@
                 <arg>--pinentry-mode</arg>
                 <arg>loopback</arg>
               </gpgArguments>
+              <keyname>4B70EA57351F5BE3C2C1AB917D35E8D74F07F1A3</keyname>
             </configuration>
           </execution>
         </executions>
