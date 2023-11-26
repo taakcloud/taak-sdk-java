@@ -13,8 +13,11 @@ import jakarta.ws.rs.core.Response;
 @RegisterRestClient
 public interface AppClient extends AutoCloseable {
 
-	@POST
-	@Path("/web-push/send")
-	Response sendWebPush(@HeaderParam("X-TAAK-API-KEY") String taakApiKey, WebPushSendCommand cmd);
+    @POST
+    @Path("/web-push/send")
+    Response sendWebPush(@HeaderParam("X-TAAK-API-KEY") String taakApiKey, WebPushSendCommand cmd);
 
+    @POST
+    @Path("/web-push/send-multi")
+    Response sendWebPushMulti(@HeaderParam("X-TAAK-API-KEY") String taakApiKey, WebPushSendCommand cmd);
 }
